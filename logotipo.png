@@ -1,0 +1,50 @@
+<header class="w-full fixed top-0 bg-orange-500 shadow z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    <img 
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAABTj3XKAAADp0lEQVR4nO3d0U0cQRRF0W+JoxsLWBKI4AHgjlXREnGkbz//ZxmbCyOd9sXvNP/Ob9MmQBIkSZIkSZIkSbJXoJ5c6+Oiv3Pdc3uqryut99nKp5Z/7NTn3vRNRkAiRJkiRJkiRJskeAHKn/2zP9e8zsXVV/Vb2vnpqf37w/v/uob6rv7RcrfM1l/VT9n/NzqgRJkiRJkiRJkhYBp5jrG8KdzOmfUX9sf66rr++0f9Vv60fV7zfp/dlv6rf0yXJ+3vvOuuI/zvN/M3/b1bdvZ1/Vj+9xOT36+m9m/fc5gAiRJkiRJkiRJ8i5QznvudKp/Fv3VV/vw/OrKtv6q/pofru5H+ff2WWvXzZ/oAkiRJkiRJkiRJ8pZAp7no9Uqf23P6qfrF+qtZ+39Nn+tx2tP7qyb+8KieVfV7+jnbmf73urPzf/uqv7X1fb+P57G67F6InSdIkSZIkSZIkSZLUJYB7XTUXv05f6ee31b+r32+rf0Q/3X2b1v7m6Y2+u6Z8Jv7Zf1f9ufZRXQyRJkiRJkiRJkuwF6LT3YpeB9Pvru0FQadGUJP21e7E30ch9xgiRJkiRJkiRJkuwF2Oj/Oj3bg7uiSUyRJkiRJkiRJkmz3fAIoVFlZFxzQNgAAAABJRU5ErkJggg==" 
+      alt="Logo AnimArte" 
+      class="logo-animarte h-16 w-auto"
+    />
+    <nav class="flex gap-5 font-semibold text-white">
+      <a href="/" class="hover:text-yellow-300">Inicio</a>
+      <a href="/propuestas" class="hover:text-yellow-300">Propuestas</a>
+      <a href="/adicionales" class="hover:text-yellow-300">Adicionales</a>
+      <a href="/quienes-somos" class="hover:text-yellow-300">Quiénes somos</a>
+      <a href="/galeria" class="hover:text-yellow-300">Galería</a>
+      <a href="/packs" class="hover:text-yellow-300">Packs</a>
+      <a href="/contacto" class="hover:text-yellow-300">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  @keyframes float-rotate {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(2deg) translateY(-4px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 0 rgba(255, 165, 0, 0); }
+    50% { box-shadow: 0 0 25px rgba(255, 195, 0, 0.5); }
+  }
+
+  @keyframes pop-in {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .logo-animarte {
+    animation: pop-in 0.4s ease-out, float-rotate 6s ease-in-out infinite, glow-pulse 3s ease-in-out infinite;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 9999px;
+    padding: 4px;
+    background: radial-gradient(circle at center, #fff 0%, transparent 70%);
+  }
+
+  .logo-animarte:hover {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(1.2) saturate(1.2);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.6);
+    background: radial-gradient(circle at center, #fffae5 0%, transparent 70%);
+  }
+</style>
