@@ -71,17 +71,20 @@
   <header>
     <img src="logo.png" alt="Logo AnimArte" class="logo">
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Propuestas</a>
-      <a href="#">Adicionales</a>
-      <a href="#">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="adicionales.html">Adicionales</a>
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="galeria.html">Galería</a>
+      <a href="packs.html">Packs</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
   <main>
     <h1>¡Bienvenid@ a AnimArte!</h1>
     <p>Somos especialistas en hacer de cada evento una experiencia inolvidable. Juegos, creatividad y alegría para todas las edades.</p>
-    <a href="#" class="cta-button">Elegí tu propuesta</a>
+    <a href="propuestas.html" class="cta-button">Elegí tu propuesta</a>
   </main>
 </body>
 </html>
