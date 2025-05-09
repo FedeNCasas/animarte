@@ -31,9 +31,15 @@
       <a href="/galeria" class="hover:text-pink-500">Galería</a>
       <a href="/packs" class="hover:text-pink-500">Packs</a>
       <a href="/contacto" class="hover:text-pink-500">Contacto</a>
-      <a href="https://wa.me/5492645123339" target="_blank" class="hover:text-green-600">WhatsApp</a>
-      <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank" class="hover:text-pink-700">Instagram</a>
-      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank" class="hover:text-blue-600">Facebook</a>
+      <a href="https://wa.me/5492645123339" target="_blank" class="hover:scale-110 transition">
+  <img src="https://img.icons8.com/ios-filled/25/25D366/whatsapp--v1.png" alt="WhatsApp" class="h-6 w-6"/>
+</a>
+      <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank" class="hover:scale-110 transition">
+  <img src="https://img.icons8.com/ios-filled/25/E4405F/instagram-new.png" alt="Instagram" class="h-6 w-6"/>
+</a>
+      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank" class="hover:scale-110 transition">
+  <img src="https://img.icons8.com/ios-filled/25/1877F2/facebook-new.png" alt="Facebook" class="h-6 w-6"/>
+</a>
     </nav>
   </div>
   <audio id="menu-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_9c5066f49e.mp3"></audio>
