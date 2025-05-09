@@ -1,126 +1,87 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnimArte San Juan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
-    @keyframes slide-down {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
     }
-    .animate-slide-down {
-      animation: slide-down 0.3s ease-out;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 1rem;
-      border-radius: 0.5rem;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-      z-index: 999;
+    header {
+      background-color: #ff7f00;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    @keyframes fade-in {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .logo {
+      height: 50px;
     }
-    .animate-fade-in {
-      animation: fade-in 1.2s ease-out both;
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff7f00;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .cta-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: white;
+      background: linear-gradient(45deg, #ff7f00, #ffcd00);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
-<body class="bg-cover bg-center bg-no-repeat min-h-screen overflow-x-hidden" style="background-image: url('/mnt/data/Captura de pantalla 2025-05-08 225025.png');">
-
-  <!-- ENCABEZADO CON LOGO Y MENÚ -->
-  <header class="w-full fixed top-0 bg-white/80 backdrop-blur-sm shadow z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-      <img src="/mnt/data/LOGO%20ANIMARTE%20VECTORIZADO.png" alt="Logo AnimArte" class="h-14 w-auto"/>
-      <button id="menu-btn" class="md:hidden text-orange-600 text-3xl transition-transform duration-300 transform">☰</button>
-      <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center gap-4 text-sm md:text-base font-semibold text-orange-600">
-        <a href="/" class="hover:text-pink-500">Inicio</a>
-        <a href="/propuestas" class="hover:text-pink-500">Propuestas</a>
-        <a href="/adicionales" class="hover:text-pink-500">Adicionales</a>
-        <a href="/quienes-somos" class="hover:text-pink-500">Quiénes somos</a>
-        <a href="/galeria" class="hover:text-pink-500">Galería</a>
-        <a href="/packs" class="hover:text-pink-500">Packs</a>
-        <a href="/contacto" class="hover:text-pink-500">Contacto</a>
-        <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank" class="hover:scale-110 transition">
-          <img src="https://img.icons8.com/ios-filled/25/E4405F/instagram-new.png" alt="Instagram" class="h-6 w-6"/>
-        </a>
-        <a href="https://www.facebook.com/animarte.sanjuan" target="_blank" class="hover:scale-110 transition">
-          <img src="https://img.icons8.com/ios-filled/25/1877F2/facebook-new.png" alt="Facebook" class="h-6 w-6"/>
-        </a>
-      </nav>
-    </div>
-    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo AnimArte" class="logo">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Propuestas</a>
+      <a href="#">Adicionales</a>
+      <a href="#">Contacto</a>
+    </nav>
   </header>
 
-  <!-- HERO PRINCIPAL -->
-  <section class="pt-24 pb-16 px-6 flex flex-col items-center text-center animate-fade-in">
-    
-    <h1 class="text-4xl md:text-5xl font-extrabold text-orange-500 mt-10 mb-4">¡Donde la alegría cobra vida! 🎉</h1>
-    <p class="text-lg text-gray-700 mb-6">Animaciones recreativas para infancias inolvidables.</p>
-    <a href="/propuestas.html" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full shadow transition">🎈 Elegí tu propuesta</a>
-  </section>
-
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a href="https://wa.me/5492645123339?text=Hola,%20más%20información%20por%20favor,%20nos%20interesa%20contratar%20el%20servicio%20😀😀"
-     target="_blank"
-     class="fixed bottom-4 right-4 z-50 bg-gradient-to-br from-green-400 via-yellow-300 to-pink-400 p-4 rounded-full shadow-lg animate-pulse hover:scale-105 transition">
-    <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
-  </a>
-
-  <!-- SCRIPTS -->
-  <audio id="menu-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_9c5066f49e.mp3"></audio>
-  <script>
-    const menuSound = document.getElementById('menu-sound');
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const overlay = document.getElementById('menu-overlay');
-    const menuLinks = menu.querySelectorAll('a');
-
-    menuBtn.addEventListener('click', () => {
-      menuSound.currentTime = 0;
-      menuSound.play();
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('animate-slide-down');
-      overlay.classList.toggle('hidden');
-      menuBtn.classList.toggle('rotate-180');
-      menuBtn.textContent = menu.classList.contains('hidden') ? '☰' : '✖';
-    });
-
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-          menu.classList.add('hidden');
-          menu.classList.remove('animate-slide-down');
-          overlay.classList.add('hidden');
-          menuBtn.textContent = '☰';
-          menuBtn.classList.remove('rotate-180');
-        }
-      });
-    });
-
-    overlay.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      menu.classList.remove('animate-slide-down');
-      overlay.classList.add('hidden');
-      menuBtn.textContent = '☰';
-      menuBtn.classList.remove('rotate-180');
-    });
-  </script>
-
-  <script>
-    document.querySelectorAll('a[href*="reservar"]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const ctaSound = document.getElementById('cta-sound');
-        if (ctaSound) {
-          ctaSound.currentTime = 0;
-          ctaSound.play();
-        }
-      });
-    });
-  </script>
+  <main>
+    <h1>¡Bienvenid@ a AnimArte!</h1>
+    <p>Somos especialistas en hacer de cada evento una experiencia inolvidable. Juegos, creatividad y alegría para todas las edades.</p>
+    <a href="#" class="cta-button">Elegí tu propuesta</a>
+  </main>
 </body>
 </html>
