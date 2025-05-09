@@ -1,1 +1,16 @@
-<img src="LOGO ANIMARTE VECTORIZADO.png" alt="Logo AnimArte" class="h-16 w-auto drop-shadow-md"/>
+<header class="w-full fixed top-0 bg-orange-500 shadow z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="/" class="flex items-center gap-2">
+      <img src="LOGO ANIMARTE VECTORIZADO.png" alt="AnimArte" class="h-16 w-auto drop-shadow-lg" />
+    </a>
+    <nav class="flex flex-wrap gap-4 text-sm md:text-base font-semibold text-white">
+      <a href="/" class="hover:text-yellow-300">Inicio</a>
+      <a href="/propuestas" class="hover:text-yellow-300">Propuestas</a>
+      <a href="/adicionales" class="hover:text-yellow-300">Adicionales</a>
+      <a href="/quienes-somos" class="hover:text-yellow-300">Quiénes somos</a>
+      <a href="/galeria" class="hover:text-yellow-300">Galería</a>
+      <a href="/packs" class="hover:text-yellow-300">Packs</a>
+      <a href="/contacto" class="hover:text-yellow-300">Contacto</a>
+    </nav>
+  </div>
+</header>
