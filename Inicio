@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnimArte San Juan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body class="bg-gradient-to-br from-yellow-100 via-pink-100 to-orange-100 min-h-screen overflow-x-hidden">
+
+  <!-- ENCABEZADO CON LOGO Y MENÚ -->
+  <header class="w-full fixed top-0 bg-white/80 backdrop-blur-sm shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <img src="/mnt/data/Diseño sin título.pdf" alt="Logo AnimArte" class="h-12 w-auto"/>
+      <nav class="space-x-4 text-sm md:text-base font-semibold text-orange-600">
+        <a href="/" class="hover:text-pink-500">Inicio</a>
+        <a href="/propuestas.html" class="hover:text-pink-500">Propuestas</a>
+        <a href="/adicionales.html" class="hover:text-pink-500">Adicionales</a>
+        <a href="/quienes-somos.html" class="hover:text-pink-500">Quiénes somos</a>
+        <a href="/contacto.html" class="hover:text-pink-500">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO PRINCIPAL -->
+  <section class="pt-24 pb-16 px-6 flex flex-col items-center text-center animate-fade-in">
+    <img src="/mnt/data/297741195_6017047334977996_5275350838111807804_n.jpg" alt="Niños jugando" class="w-full max-w-4xl rounded-xl shadow-xl mb-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-orange-500 mb-4">¡Donde la alegría cobra vida! 🎉</h1>
+    <p class="text-lg text-gray-700 mb-6">Animaciones recreativas para infancias inolvidables.</p>
+    <a href="/propuestas.html" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full shadow transition">🎈 Elegí tu propuesta</a>
+  </section>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/5492645123339?text=Hola,%20más%20información%20por%20favor,%20nos%20interesa%20contratar%20el%20servicio%20😀😀"
+     target="_blank"
+     class="fixed bottom-4 right-4 z-50 bg-gradient-to-br from-green-400 via-yellow-300 to-pink-400 p-4 rounded-full shadow-lg animate-pulse hover:scale-105 transition">
+    <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+  <!-- ANIMACIÓN FADE-IN -->
+  <style>
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 1.2s ease-out both;
+    }
+  </style>
+
+</body>
+</html>
