@@ -1,19 +1,20 @@
+
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnimArte San Juan</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AnimArte San Juan</title>
+<style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       background: linear-gradient(270deg, #ffecd2, #fcb69f, #fcd5ce, #ffe3e3);
-      background-size: cover;
+      background-size: 800% 800%;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-size: 800% 800%;
       animation: animatedBackground 20s ease infinite;
       overflow-x: hidden;
       color: #333;
@@ -70,13 +71,21 @@
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
-    $1
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    .cta-button {
+      background: linear-gradient(45deg, #ff7f00, #ffcd00);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -160,85 +169,158 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+    .floating-balloons {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background: radial-gradient(circle at 30% 30%, #ffd1dc, #ff69b4);
+      border-radius: 50% 50% 45% 45%;
+      animation: floatBalloon 20s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes floatBalloon {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.1);
+        opacity: 0;
+      }
+    }
+  
+.footer-banner {
+  background-color: #ff7f00;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-in;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const colors = ['#FFD700', '#FF69B4', '#87CEEB', '#32CD32', '#FF7F50'];
+  for (let i = 0; i < 100; i++) {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDelay = Math.random() * 5 + "s";
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(confetti);
+  }
+});
+</script>
+<style>
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 6s linear infinite;
+  z-index: 1;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
 </head>
-<body>
-  <header>
-    <a href="index.html">
-      <img src="logo.png" alt="Logo AnimArte" />
-    </a>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="propuestas.html">Propuestas</a>
-      <a href="adicionales.html">Adicionales</a>
-      <a href="quienes-somos.html">Quiénes somos</a>
-      <a href="galeria.html">Galería</a>
-      <a href="packs.html">Packs</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1>🎉 ¡Bienvenid@ a AnimArte!</h1>
-      <p>Creamos momentos mágicos que dejan huellas. Somos especialistas en animación infantil con corazón 💛</p>
-      <a href="propuestas.html" class="cta-button">Conocé nuestras propuestas</a>
-    </section>
-
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
-        <span>– Mariana G.</span>
-      </div>
-      <div class="testimonial">
-        <p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
-        <span>– Lucas P.</span>
-      </div>
-      <div class="testimonial">
-        <p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
-        <span>– Carla S.</span>
-      </div>
-    </div>
-
-    <div style="margin: 2rem 0; text-align: center;">
-      <a href="https://www.google.com/maps/place/Animarte+San+Juan/@-31.5424586,-68.558105,20.01z/data=!4m8!3m7!1s0xa5ded485c2c4507b:0x29665f791757b6cf!8m2!3d-31.5423433!4d-68.5578874!9m1!1b1!16s%2Fg%2F11s59y94l0?entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" aria-label="Leer reseñas en Google Maps de AnimArte San Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
+<body style="background: url('paracaidas.jpg') no-repeat center center fixed;background-size: cover;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;overflow-x: hidden;color: #333;">
+<header>
+<a href="index.html">
+<img alt="Logo AnimArte" src="logo.png"/>
+</a>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="propuestas.html">Propuestas</a>
+<a href="adicionales.html">Adicionales</a>
+<a href="quienes-somos.html">Quiénes somos</a>
+<a href="galeria.html">Galería</a>
+<a href="packs.html">Packs</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<h1>🎉 ¡Bienvenid@ a AnimArte!</h1>
+<p>Creamos momentos mágicos que dejan huellas. Somos especialistas en animación infantil con corazón 💛</p>
+<a class="cta-button" href="propuestas.html">Conocé nuestras propuestas</a>
+</section>
+<div class="testimonials">
+<div class="testimonial">
+<p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
+<span>– Mariana G.</span>
+</div>
+<div class="testimonial">
+<p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
+<span>– Lucas P.</span>
+</div>
+<div class="testimonial">
+<p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
+<span>– Carla S.</span>
+</div>
+</div>
+<div style="margin: 2rem 0; text-align: center;">
+<a href="https://www.google.com/maps/place/Animarte+San+Juan/@-31.5423433,-68.5578874,17z/data=!4m8!3m7!1s0xa5ded485c2c4507b:0x29665f791757b6cf!8m2!3d-31.5423433!4d-68.5578874!9m1!1b1!16s%2Fg%2F11s59y94l0?hl=es&amp;entry=ttu&amp;authuser=0&amp;review=1" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;" target="_blank">
         ⭐ Ver más reseñas reales en Google Maps
-        <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" width="24" height="24" />
-      </a>
-    </div>
-
-    <section class="faq-section">
-      <h2>❓ Preguntas Frecuentes</h2>
-      <details class="faq">
-        <summary>¿Qué propuesta recomiendan para cada edad?</summary>
-        <p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
-      </details>
-      <details class="faq">
-        <summary>¿A qué hora conviene comenzar la animación?</summary>
-        <p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Qué incluye cada propuesta y cada adicional?</summary>
-        <p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
-      </details>
-      <details class="faq">
-        <summary>¿Cuánto cuesta cada adicional?</summary>
-        <p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
-        <p>¡Sí! Vamos a muchas zonas de San Juan. Solo tené en cuenta que fuera del radio de la Circunvalación tiene un costo adicional de $10.000.</p>
-      </details>
-    </section>
-
-    <div class="footer-banner">
-      Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
+        <img alt="Google Maps" height="24" src="https://img.icons8.com/color/48/google-maps-new.png" width="24"/>
+</a>
+</div>
+<section class="faq-section">
+<h2>❓ Preguntas Frecuentes</h2>
+<details class="faq">
+<summary>¿Qué propuesta recomiendan para cada edad?</summary>
+<p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
+</details>
+<details class="faq">
+<summary>¿A qué hora conviene comenzar la animación?</summary>
+<p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
+</details>
+<details class="faq">
+<summary>¿Qué incluye cada propuesta y cada adicional?</summary>
+<p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
+</details>
+<details class="faq">
+<summary>¿Cuánto cuesta cada adicional?</summary>
+<p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
+</details>
+<details class="faq">
+<summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
+<p>¡Sí! Vamos a muchas zonas de San Juan. Consultanos para saber si llegamos a tu localidad. Si estás fuera del radio de la Circunvalación, se aplica un costo adicional.</p>
+</details>
+</section>
+<div class="footer-banner">
+      Empresa familiar con más de 10 años repartiendo sonrisas 💕<br/>
       ¡Gracias por confiar en AnimArte San Juan!
     </div>
-  </main>
-
-  <a href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" class="whatsapp-button" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" width="30" height="30" />
-  </a>
+</main>
+<a class="whatsapp-button" href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" target="_blank">
+<img alt="WhatsApp" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
+</a>
 </body>
 </html>
