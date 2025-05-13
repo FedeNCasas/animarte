@@ -7,13 +7,13 @@
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      background-image: url('/mnt/data/fondo-inicio.png');
+      background: linear-gradient(270deg, #ffecd2, #fcb69f, #fcd5ce, #ffe3e3);
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* background gradient eliminado porque ya hay una imagen */
+      
       background-size: 800% 800%;
       animation: animatedBackground 20s ease infinite;
       overflow-x: hidden;
@@ -113,9 +113,21 @@
       max-width: 700px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .faq-section h2 {
-      text-align: center;
-      margin-bottom: 1rem;
+        .faq summary::before {
+      content: '❓ ';
+      margin-right: 0.5rem;
+      color: #ff7f00;
+    }
+    .faq[open] summary::before {
+      content: '✅ ';
+    }
+    .faq summary {
+      transition: background 0.3s ease, color 0.3s ease;
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+    .faq[open] summary {
+      background: #fff7e6;
       color: #ff7f00;
     }
     .faq {
@@ -214,20 +226,28 @@
     </div>
 
     <section class="faq-section">
-      <h2>❓ Preguntas Frecuentes</h2>
-      <details class="faq">
-        <summary>¿Qué incluye la animación?</summary>
-        <p>Juegos, música, maquillaje artístico, globología, y mucho más.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Cuánto dura una fiesta?</summary>
-        <p>Nuestras animaciones duran entre 1h30 y 2h, dependiendo del pack elegido.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Trabajan en toda la provincia?</summary>
-        <p>¡Sí! AnimArte llega a donde nos necesites dentro de San Juan.</p>
-      </details>
-    </section>
+  <h2>❓ Preguntas Frecuentes</h2>
+  <details class="faq">
+    <summary>¿Qué propuesta recomiendan para cada edad?</summary>
+    <p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
+  </details>
+  <details class="faq">
+    <summary>¿A qué hora conviene comenzar la animación?</summary>
+    <p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
+  </details>
+  <details class="faq">
+    <summary>¿Qué incluye cada propuesta y cada adicional?</summary>
+    <p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
+  </details>
+  <details class="faq">
+    <summary>¿Cuánto cuesta cada adicional?</summary>
+    <p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
+  </details>
+  <details class="faq">
+    <summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
+    <p>¡Sí! Vamos a muchas zonas de San Juan. Solo tené en cuenta que fuera del radio de la Circunvalación tiene un costo adicional de $10.000.</p>
+  </details>
+</section>
 
     <div class="footer-banner">
       Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
