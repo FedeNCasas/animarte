@@ -7,8 +7,13 @@
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
+      background-image: url('/mnt/data/612f4aaf-d6d2-4e17-a993-6f5c81e3ac45.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(270deg, #ffecd2, #fcb69f, #fcd5ce, #ffe3e3);
+      /* background gradient eliminado porque ya hay una imagen */
       background-size: 800% 800%;
       animation: animatedBackground 20s ease infinite;
       overflow-x: hidden;
@@ -161,24 +166,7 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 3rem auto;
-    max-width: 1000px;
-    padding: 0 1rem;
-  }
-  .gallery img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  }$1
+  </style>
 </head>
 <body>
   <header>
@@ -244,13 +232,8 @@
     <div class="footer-banner">
       Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
       ¡Gracias por confiar en AnimArte San Juan!
-    <section class="gallery">
-  <img src="img/foto1.jpg" alt="Animación 1">
-  <img src="img/foto2.jpg" alt="Animación 2">
-  <img src="img/foto3.jpg" alt="Animación 3">
-  <img src="img/foto4.jpg" alt="Animación 4">
-</section>
-$1
+    </div>
+  </main>
 
   <a href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" class="whatsapp-button" target="_blank">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" width="30" height="30" />
