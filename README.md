@@ -162,10 +162,7 @@
       <a href="propuestas.html" class="cta-button">Elegí tu propuesta</a>
     </section>
 
-    <section class="google-reviews">
-      <h2 style="font-size: 1.8rem; color: #ff7f00; margin-bottom: 1rem;">⭐ Lo que dicen nuestras familias</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1715712230996!6m8!1m7!1sCAoSLEFGMVFpcE1XcTRvdFhqRlVjWlQ5NnRfNnRlX3dYZkU0UGktU05GQV9KVFRJ!2m2!1d-31.5383004!2d-68.5269756!3f0!4f0!5f0.7820865974627469" title="Reseñas de Google"></iframe>
-    </section>
+    
   <section class="google-reviews">
       <h2 style="font-size: 1.8rem; color: #ff7f00; margin-bottom: 1rem;">⭐ Lo que dicen nuestras familias</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!4v1715712230996!6m8!1m7!1sCAoSLEFGMVFpcE1XcTRvdFhqRlVjWlQ5NnRfNnRlX3dYZkU0UGktU05GQV9KVFRJ!2m2!1d-31.5383004!2d-68.5269756!3f0!4f0!5f0.7820865974627469" title="Reseñas de Google"></iframe>
