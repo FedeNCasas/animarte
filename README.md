@@ -124,25 +124,8 @@
     .faq p {
       margin-top: 0.5rem;
     }
-    .reviews-section {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    .reviews-section h2 {
-      font-size: 1.8rem;
-      color: #ff7f00;
-      margin-bottom: 1rem;
-    }
-    .google-reviews iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 500px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
     .testimonials {
-      margin-top: 2rem;
+      margin: 2rem 1rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -178,7 +161,24 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  }$1
 </head>
 <body>
   <header>
@@ -203,57 +203,54 @@
       <a href="propuestas.html" class="cta-button">Conocé nuestras propuestas</a>
     </section>
 
-    
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
+        <span>– Mariana G.</span>
+      </div>
+      <div class="testimonial">
+        <p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
+        <span>– Lucas P.</span>
+      </div>
+      <div class="testimonial">
+        <p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
+        <span>– Carla S.</span>
+      </div>
+    </div>
 
-    
-        <div style="margin: 1.5rem 0;">
-          <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-block; background-color: #ff7f00; color: white; padding: 0.8rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-            💬 Ver más reseñas en Google
-          </a>
-        </div>
-      
-      <div class="testimonials">
-        <div class="testimonial">
-          <p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
-          <span>– Mariana G.</span>
-        </div>
-        <div class="testimonial">
-          <p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
-          <span>– Lucas P.</span>
-        </div>
-        <div class="testimonial">
-          <p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
-          <span>– Carla S.</span>
-        </div>
-      $1
-<div style="margin: 2rem 0; text-align: center;">
-  <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
-    ⭐ Ver más reseñas reales en Google Maps
-    <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" width="24" height="24" />
-  </a>
-</div>
+    <div style="margin: 2rem 0; text-align: center;">
+      <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
+        ⭐ Ver más reseñas reales en Google Maps
+        <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" width="24" height="24" />
+      </a>
+    </div>
 
     <section class="faq-section">
-  <h2>❓ Preguntas Frecuentes</h2>
-  <details class="faq">
-    <summary>¿Qué incluye la animación?</summary>
-    <p>Juegos, música, maquillaje artístico, globología, y mucho más.</p>
-  </details>
-  <details class="faq">
-    <summary>¿Cuánto dura una fiesta?</summary>
-    <p>Nuestras animaciones duran entre 1h30 y 2h, dependiendo del pack elegido.</p>
-  </details>
-  <details class="faq">
-    <summary>¿Trabajan en toda la provincia?</summary>
-    <p>¡Sí! AnimArte llega a donde nos necesites dentro de San Juan.</p>
-  </details>
-</section>
+      <h2>❓ Preguntas Frecuentes</h2>
+      <details class="faq">
+        <summary>¿Qué incluye la animación?</summary>
+        <p>Juegos, música, maquillaje artístico, globología, y mucho más.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Cuánto dura una fiesta?</summary>
+        <p>Nuestras animaciones duran entre 1h30 y 2h, dependiendo del pack elegido.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Trabajan en toda la provincia?</summary>
+        <p>¡Sí! AnimArte llega a donde nos necesites dentro de San Juan.</p>
+      </details>
+    </section>
 
-$1
+    <div class="footer-banner">
       Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
       ¡Gracias por confiar en AnimArte San Juan!
-    </div>
-  </main>
+    <section class="gallery">
+  <img src="img/foto1.jpg" alt="Animación 1">
+  <img src="img/foto2.jpg" alt="Animación 2">
+  <img src="img/foto3.jpg" alt="Animación 3">
+  <img src="img/foto4.jpg" alt="Animación 4">
+</section>
+$1
 
   <a href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" class="whatsapp-button" target="_blank">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" width="30" height="30" />
