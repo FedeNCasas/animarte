@@ -7,7 +7,7 @@
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      background-image: url('/mnt/data/612f4aaf-d6d2-4e17-a993-6f5c81e3ac45.png');
+      background-image: url('/mnt/data/fondo-inicio.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
