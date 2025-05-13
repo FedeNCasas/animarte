@@ -5,18 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnimArte San Juan</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      font-family: Arial, sans-serif;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(270deg, #ffecd2, #fcb69f, #fcd5ce, #ffe3e3);
       background-size: 800% 800%;
       animation: animatedBackground 20s ease infinite;
       overflow-x: hidden;
+      color: #333;
     }
     @keyframes animatedBackground {
       0% { background-position: 0% 50%; }
@@ -25,7 +21,6 @@
     }
     header {
       background-color: #ff7f00;
-      color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -33,6 +28,17 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+    header img {
+      height: 60px;
+      border-radius: 12px;
+      background: white;
+      padding: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    header img:hover {
+      transform: scale(1.1);
     }
     nav {
       display: flex;
@@ -46,86 +52,86 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      margin: 2rem auto;
+      max-width: 700px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-out;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      color: #ff7f00;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta-button {
+      background: linear-gradient(45deg, #ff7f00, #ffcd00);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      background-size: 400% 400%;
-      animation: gradientMove 5s ease infinite;
-      color: white;
-      border: none;
-      border-radius: 50%;
       width: 60px;
       height: 60px;
-      font-size: 30px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      cursor: pointer;
-      text-decoration: none;
-      z-index: 100;
+      animation: pulse 2s infinite;
     }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-    .cta-button {
-      display: inline-block;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      color: white;
-      background: linear-gradient(45deg, #ff7f00, #ffcd00);
-      border: none;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-    }
-    .hero {
-      text-align: center;
-      margin-top: 5rem;
+    .faq-section {
+      background: #fff;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 16px;
+      margin: 3rem auto;
+      border-radius: 12px;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      animation: fade-in 1s ease-out;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .hero h1 {
-      font-size: 2.8rem;
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
       color: #ff7f00;
-      animation: slide-in 1s ease forwards;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
+    .faq {
       margin-bottom: 1rem;
     }
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .faq summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
     }
-    @keyframes slide-in {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+    .faq p {
+      margin-top: 0.5rem;
     }
-    .google-reviews {
+    .reviews-section {
+      padding: 3rem 1rem;
       text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
+    }
+    .reviews-section h2 {
+      font-size: 1.8rem;
+      color: #ff7f00;
+      margin-bottom: 1rem;
     }
     .google-reviews iframe {
       width: 100%;
@@ -135,15 +141,50 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+    .testimonials {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 280px;
+    }
+    .testimonial p {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+    .testimonial span {
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
+      color: #ff7f00;
+    }
+    .footer-banner {
+      text-align: center;
+      background: #ff7f00;
+      color: #fff;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-radius: 12px 12px 0 0;
+      font-size: 1.2rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <a href="index.html">
-        <img src="logo.png" alt="Logo AnimArte" style="height: 60px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.3s; background: white; padding: 4px;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-    </div>
+    <a href="index.html">
+      <img src="logo.png" alt="Logo AnimArte" />
+    </a>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="propuestas.html">Propuestas</a>
@@ -158,34 +199,64 @@
   <main>
     <section class="hero">
       <h1>🎉 ¡Bienvenid@ a AnimArte!</h1>
-      <p>Somos especialistas en hacer de cada evento una experiencia inolvidable. Juegos, creatividad y alegría para todas las edades.</p>
-      <a href="propuestas.html" class="cta-button">Elegí tu propuesta</a>
+      <p>Creamos momentos mágicos que dejan huellas. Somos especialistas en animación infantil con corazón 💛</p>
+      <a href="propuestas.html" class="cta-button">Conocé nuestras propuestas</a>
     </section>
 
     
-  <section class="google-reviews">
-      <h2 style="font-size: 1.8rem; color: #ff7f00; margin-bottom: 1rem;">⭐ Lo que dicen nuestras familias</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1715712230996!6m8!1m7!1sCAoSLEFGMVFpcE1XcTRvdFhqRlVjWlQ5NnRfNnRlX3dYZkU0UGktU05GQV9KVFRJ!2m2!1d-31.5383004!2d-68.5269756!3f0!4f0!5f0.7820865974627469" title="Reseñas de Google"></iframe>
-      <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-        <div style="background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 280px;">
-          <p style="font-size: 1.1rem; font-style: italic;">“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
-          <p style="font-weight: bold; margin-top: 0.5rem; color: #ff7f00;">– Mariana G.</p>
+
+    
+        <div style="margin: 1.5rem 0;">
+          <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-block; background-color: #ff7f00; color: white; padding: 0.8rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            💬 Ver más reseñas en Google
+          </a>
         </div>
-        <div style="background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 280px;">
-          <p style="font-size: 1.1rem; font-style: italic;">“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
-          <p style="font-weight: bold; margin-top: 0.5rem; color: #ff7f00;">– Lucas P.</p>
+      
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
+          <span>– Mariana G.</span>
         </div>
-        <div style="background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 280px;">
-          <p style="font-size: 1.1rem; font-style: italic;">“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
-          <p style="font-weight: bold; margin-top: 0.5rem; color: #ff7f00;">– Carla S.</p>
+        <div class="testimonial">
+          <p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
+          <span>– Lucas P.</span>
         </div>
-      </div>
-    </section>
+        <div class="testimonial">
+          <p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
+          <span>– Carla S.</span>
+        </div>
+      $1
+<div style="margin: 2rem 0; text-align: center;">
+  <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
+    ⭐ Ver más reseñas reales en Google Maps
+    <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" width="24" height="24" />
+  </a>
+</div>
+
+    <section class="faq-section">
+  <h2>❓ Preguntas Frecuentes</h2>
+  <details class="faq">
+    <summary>¿Qué incluye la animación?</summary>
+    <p>Juegos, música, maquillaje artístico, globología, y mucho más.</p>
+  </details>
+  <details class="faq">
+    <summary>¿Cuánto dura una fiesta?</summary>
+    <p>Nuestras animaciones duran entre 1h30 y 2h, dependiendo del pack elegido.</p>
+  </details>
+  <details class="faq">
+    <summary>¿Trabajan en toda la provincia?</summary>
+    <p>¡Sí! AnimArte llega a donde nos necesites dentro de San Juan.</p>
+  </details>
+</section>
+
+$1
+      Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
+      ¡Gracias por confiar en AnimArte San Juan!
+    </div>
   </main>
 
-  <!-- ✅ Botón de WhatsApp flotante -->
-  <a href="https://wa.me/5492645123339?text=Hola,%20mas%20informacion%20porfavor,%20nos%20interesa%20contratar%20el%20servicio%20%F0%9F%98%80%F0%9F%98%80" class="whatsapp-button" target="_blank" aria-label="Chatear por WhatsApp">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;" />
+  <a href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" class="whatsapp-button" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" width="30" height="30" />
   </a>
 </body>
 </html>
