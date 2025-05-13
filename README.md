@@ -67,11 +67,8 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       animation: fadeIn 1s ease-out;
     }
-    .hero h1 {
-      font-size: 2.6rem;
-      color: #ff7f00;
-      margin-bottom: 1rem;
-    }
+    animation: slideFadeIn 1.2s ease-out;
+}
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
@@ -165,20 +162,21 @@
       margin-top: 0.5rem;
       color: #ff7f00;
     }
-    .footer-banner {
-      text-align: center;
-      background: #ff7f00;
-      color: #fff;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      border-radius: 12px 12px 0 0;
-      font-size: 1.2rem;
-    }
+    animation: fadeInUp 1s ease-in-out;
+}
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+    @keyframes slideFadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 </head>
 <body>
   <header>
@@ -219,7 +217,7 @@
     </div>
 
     <div style="margin: 2rem 0; text-align: center;">
-      <a href="https://www.google.com/maps/place/AnimArte+San+Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
+      <a href="https://www.google.com/maps/place/Animarte+San+Juan/@-31.5424586,-68.558105,20.01z/data=!4m8!3m7!1s0xa5ded485c2c4507b:0x29665f791757b6cf!8m2!3d-31.5423433!4d-68.5578874!9m1!1b1!16s%2Fg%2F11s59y94l0?entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" aria-label="Leer reseñas en Google Maps de AnimArte San Juan" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;">
         ⭐ Ver más reseñas reales en Google Maps
         <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" width="24" height="24" />
       </a>
