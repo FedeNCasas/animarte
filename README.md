@@ -13,7 +13,6 @@
       background-attachment: fixed;
       background-position: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      
       background-size: 800% 800%;
       animation: animatedBackground 20s ease infinite;
       overflow-x: hidden;
@@ -67,22 +66,17 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       animation: fadeIn 1s ease-out;
     }
-    animation: slideFadeIn 1.2s ease-out;
-}
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
-    .cta-button {
-      background: linear-gradient(45deg, #ff7f00, #ffcd00);
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
+    $1
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -110,7 +104,7 @@
       max-width: 700px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-        .faq summary::before {
+    .faq summary::before {
       content: '❓ ';
       margin-right: 0.5rem;
       color: #ff7f00;
@@ -162,21 +156,11 @@
       margin-top: 0.5rem;
       color: #ff7f00;
     }
-    animation: fadeInUp 1s ease-in-out;
-}
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes slideFadeIn {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  </style>
 </head>
 <body>
   <header>
@@ -224,28 +208,28 @@
     </div>
 
     <section class="faq-section">
-  <h2>❓ Preguntas Frecuentes</h2>
-  <details class="faq">
-    <summary>¿Qué propuesta recomiendan para cada edad?</summary>
-    <p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
-  </details>
-  <details class="faq">
-    <summary>¿A qué hora conviene comenzar la animación?</summary>
-    <p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
-  </details>
-  <details class="faq">
-    <summary>¿Qué incluye cada propuesta y cada adicional?</summary>
-    <p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
-  </details>
-  <details class="faq">
-    <summary>¿Cuánto cuesta cada adicional?</summary>
-    <p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
-  </details>
-  <details class="faq">
-    <summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
-    <p>¡Sí! Vamos a muchas zonas de San Juan. Solo tené en cuenta que fuera del radio de la Circunvalación tiene un costo adicional de $10.000.</p>
-  </details>
-</section>
+      <h2>❓ Preguntas Frecuentes</h2>
+      <details class="faq">
+        <summary>¿Qué propuesta recomiendan para cada edad?</summary>
+        <p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
+      </details>
+      <details class="faq">
+        <summary>¿A qué hora conviene comenzar la animación?</summary>
+        <p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Qué incluye cada propuesta y cada adicional?</summary>
+        <p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
+      </details>
+      <details class="faq">
+        <summary>¿Cuánto cuesta cada adicional?</summary>
+        <p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
+        <p>¡Sí! Vamos a muchas zonas de San Juan. Solo tené en cuenta que fuera del radio de la Circunvalación tiene un costo adicional de $10.000.</p>
+      </details>
+    </section>
 
     <div class="footer-banner">
       Empresa familiar con más de 10 años repartiendo sonrisas 💕<br />
