@@ -9,16 +9,12 @@
 <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      background: linear-gradient(270deg, #ffecd2, #fcb69f, #fcd5ce, #ffe3e3);
-      background-size: 800% 800%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      animation: animatedBackground 20s ease infinite;
-      overflow-x: hidden;
-      color: #333;
-    }
+  background: url('paracaidas.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: #333;
+}
     @keyframes animatedBackground {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
