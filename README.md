@@ -67,21 +67,8 @@
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
-    .cta-button {
-      background: linear-gradient(45deg, #ff7f00, #ffcd00);
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .cta-button:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
+    
+    
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -209,6 +196,25 @@
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
   animation: fadeIn 1.2s ease-in;
 }
+
+.cta-button {
+  background: repeating-linear-gradient(
+    45deg,
+    red, orange 20%, yellow 40%, green 60%, blue 80%, violet 100%
+  );
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.07);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -256,8 +262,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <a href="propuestas.html">Propuestas</a>
 <a href="adicionales.html">Adicionales</a>
 <a href="quienes-somos.html">Quiénes somos</a>
-<a href="galeria.html">Galería</a>
-<a href="packs.html">Packs</a>
+
+
 <a href="contacto.html">Contacto</a>
 </nav>
 </header>
