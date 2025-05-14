@@ -1,348 +1,212 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AnimArte San Juan</title>
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {
-  background: url('paracaidas.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-  color: #333;
-}
-    @keyframes animatedBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-header {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimArte San Juan</title>
+  <script src="https://cdn.tailwindcss.com">// íconos dinámicos de preguntas frecuentes
+  document.querySelectorAll('.faq').forEach(detail => {
+    const summary = detail.querySelector('summary');
+    const openIcon = summary.querySelector('.open-icon');
+    const closedIcon = summary.querySelector('.closed-icon');
 
-    header img {
-      height: 60px;
-      border-radius: 12px;
-      background: white;
-      padding: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-    header img:hover {
-      transform: scale(1.1);
-    }
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
-    
-nav a {
-  color: #ff7f00;
-  text-decoration: none;
-  font-weight: bold;
-}
+    detail.addEventListener('toggle', () => {
+      if (detail.open) {
+        openIcon.classList.remove('hidden');
+        closedIcon.classList.add('hidden');
+      } else {
+        openIcon.classList.add('hidden');
+        closedIcon.classList.remove('hidden');
+      }
+    });
+  });
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 16px;
-      margin: 2rem auto;
-      max-width: 700px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      animation: fadeIn 1s ease-out;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    .faq-section {
-      background: #fff;
-      padding: 2rem;
-      margin: 3rem auto;
-      border-radius: 12px;
-      max-width: 700px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .faq summary::before {
-      content: '❓ ';
-      margin-right: 0.5rem;
-      color: #ff7f00;
-    }
-    .faq[open] summary::before {
-      content: '✅ ';
-    }
-    .faq summary {
-      transition: background 0.3s ease, color 0.3s ease;
-      padding: 0.5rem;
-      border-radius: 8px;
-    }
-    .faq[open] summary {
-      background: #fff7e6;
-      color: #ff7f00;
-    }
-    .faq {
-      margin-bottom: 1rem;
-    }
-    .faq summary {
-      font-weight: bold;
-      cursor: pointer;
-      color: #333;
-    }
-    .faq p {
-      margin-top: 0.5rem;
-    }
-    .testimonials {
-      margin: 2rem 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .testimonial {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      max-width: 280px;
-    }
-    .testimonial p {
-      font-size: 1.1rem;
-      font-style: italic;
-    }
-    .testimonial span {
-      font-weight: bold;
-      display: block;
-      margin-top: 0.5rem;
-      color: #ff7f00;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+</script>
+  <style>
+    @keyframes slide-down {
+      from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .floating-balloons {
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    .animate-slide-down { animation: slide-down 0.3s ease-out; }
+    .backdrop-blur { backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.75); }
+    .confetti {
       position: fixed;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: visible;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall 6s linear infinite;
+      z-index: 1;
     }
-    .balloon {
-      position: absolute;
-      bottom: -100px;
-      width: 40px;
-      height: 60px;
-      background: radial-gradient(circle at 30% 30%, #ffd1dc, #ff69b4);
-      border-radius: 50% 50% 45% 45%;
-      animation: floatBalloon 20s linear infinite;
-      opacity: 0.7;
-    }
-    @keyframes floatBalloon {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.7;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) scale(1.1);
-        opacity: 0;
-      }
-    }
-  
-.footer-banner {
-  background-color: #ff7f00;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-  animation: fadeIn 1.2s ease-in;
-}
-
-.cta-button {
-  background: repeating-linear-gradient(
-    45deg,
-    red, orange 20%, yellow 40%, green 60%, blue 80%, violet 100%
-  );
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-.cta-button:hover {
-  transform: translateY(-4px) scale(1.07);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.hero, .testimonials, .faq-section, .footer-banner {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const colors = ['#FFD700', '#FF69B4', '#87CEEB', '#32CD32', '#FF7F50'];
-  for (let i = 0; i < 100; i++) {
-    const confetti = document.createElement("div");
-    confetti.classList.add("confetti");
-    confetti.style.left = Math.random() * 100 + "vw";
-    confetti.style.animationDelay = Math.random() * 5 + "s";
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.appendChild(confetti);
-  }
-});
-</script>
-<style>
-.confetti {
-  position: fixed;
-  top: -10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  opacity: 0.8;
-  animation: fall 6s linear infinite;
-  z-index: 1;
-}
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-</style>
+  </style>
 </head>
-<body style="background: url('paracaidas.jpg') no-repeat center center fixed;background-size: cover;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;overflow-x: hidden;color: #333;">
-<header>
-<div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-<!-- Logo a la izquierda -->
-<div class="flex-shrink-0">
-<img alt="Logo AnimArte" class="h-12 w-auto" src="logo.png"/>
-</div>
-<!-- Menú centrado -->
-<nav class="hidden md:flex gap-6 text-orange-600 font-semibold text-sm md:text-base mx-auto">
-<a class="hover:text-pink-500" href="index.html">Inicio</a>
-<a class="hover:text-pink-500" href="propuestas.html">Propuestas</a>
-<a class="hover:text-pink-500" href="adicionales.html">Adicionales</a>
-<a class="hover:text-pink-500" href="quienes-somos.html">Quiénes somos</a>
-<a class="hover:text-pink-500" href="contacto.html">Contacto</a>
-</nav>
-<!-- Redes sociales a la derecha -->
-<div class="flex gap-3">
-<a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank">
-<img alt="Instagram" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/E4405F/instagram-new.png"/>
-</a>
-<a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
-<img alt="Facebook" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/1877F2/facebook-new.png"/>
-</a>
-</div>
-</div>
-</header>
-<main>
-<section class="hero">
-<h1>🎉 ¡Bienvenid@ a AnimArte!</h1>
-<p>Creamos momentos mágicos que dejan huellas. Somos especialistas en animación infantil con corazón 💛</p>
-<a class="cta-button" href="propuestas.html">Conocé nuestras propuestas</a>
-</section>
-<div class="testimonials">
-<div class="testimonial">
-<p>“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
-<span>– Mariana G.</span>
-</div>
-<div class="testimonial">
-<p>“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
-<span>– Lucas P.</span>
-</div>
-<div class="testimonial">
-<p>“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
-<span>– Carla S.</span>
-</div>
-</div>
-<div style="margin: 2rem 0; text-align: center;">
-<a href="https://www.google.com/maps/place/Animarte+San+Juan/@-31.5423433,-68.5578874,17z/data=!4m8!3m7!1s0xa5ded485c2c4507b:0x29665f791757b6cf!8m2!3d-31.5423433!4d-68.5578874!9m1!1b1!16s%2Fg%2F11s59y94l0?hl=es&amp;entry=ttu&amp;authuser=0&amp;review=1" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #ff7f00; color: white; padding: 0.9rem 1.8rem; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.25); transition: transform 0.2s ease-in-out;" target="_blank">
-        ⭐ Ver más reseñas reales en Google Maps
-        <img alt="Google Maps" height="24" src="https://img.icons8.com/color/48/google-maps-new.png" width="24"/>
-</a>
-</div>
-<section class="faq-section">
-<h2>❓ Preguntas Frecuentes</h2>
-<details class="faq">
-<summary>¿Qué propuesta recomiendan para cada edad?</summary>
-<p>Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
-</details>
-<details class="faq">
-<summary>¿A qué hora conviene comenzar la animación?</summary>
-<p>Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
-</details>
-<details class="faq">
-<summary>¿Qué incluye cada propuesta y cada adicional?</summary>
-<p>Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
-</details>
-<details class="faq">
-<summary>¿Cuánto cuesta cada adicional?</summary>
-<p>El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
-</details>
-<details class="faq">
-<summary>¿Viajan a otras localidades como Caucete o Ullum?</summary>
-<p>¡Sí! Vamos a muchas zonas de San Juan. Consultanos para saber si llegamos a tu localidad. Si estás fuera del radio de la Circunvalación, se aplica un costo adicional.</p>
-</details>
-</section>
-<div class="footer-banner">
-      Empresa familiar con más de 10 años repartiendo sonrisas 💕<br/>
-      ¡Gracias por confiar en AnimArte San Juan!
+<body class="font-sans bg-[url('paracaidas.jpg')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden">
+
+<header class="bg-white/90 shadow sticky top-0 z-50 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+    <div class="flex-shrink-0">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo AnimArte" class="h-12 transition-transform duration-300 hover:scale-110 rounded-xl shadow" />
+      </a>
     </div>
+    <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none z-50">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex gap-6 font-semibold text-sm md:text-base absolute md:static top-full left-0 w-full md:w-auto backdrop-blur py-6 md:py-0 px-6 md:px-0 flex-col md:flex-row items-center md:items-center text-orange-600 shadow md:shadow-none animate-slide-down">
+      <a href="index.html" class="hover:text-pink-500">Inicio</a>
+      <a href="propuestas.html" class="hover:text-pink-500">Propuestas</a>
+      <a href="adicionales.html" class="hover:text-pink-500">Adicionales</a>
+      <a href="quienes-somos.html" class="hover:text-pink-500">Quiénes somos</a>
+      <a href="contacto.html" class="hover:text-pink-500">Contacto</a>
+    </nav>
+    <div class="hidden md:flex gap-3 absolute right-4 md:static">
+      <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+    </div>
+  </div>
+</header>
+
+<div id="confetti-wrapper"></div>
+
+<main class="px-4">
+  <section class="hero text-center py-12 bg-white/80 backdrop-blur rounded-2xl max-w-3xl mx-auto my-8 shadow-lg animate-slide-down">
+    <h1 class="text-3xl font-bold text-orange-500 mb-4">🎉 ¡Bienvenid@ a AnimArte!</h1>
+    <p class="text-lg mb-6">Creamos momentos mágicos que dejan huellas. Somos especialistas en animación infantil con corazón 💛</p>
+    <a href="propuestas.html" class="inline-block px-6 py-3 text-white font-bold text-lg rounded-full bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 hover:scale-105 transition-transform shadow-lg">Conocé nuestras propuestas</a>
+  </section>
+
+  <div class="text-center my-8">
+    <a href="https://www.google.com/maps/place/Animarte+San+Juan/@-31.5429817,-68.5582286,17.5z/data=!4m8!3m7!1s0xa5ded485c2c4507b:0x29665f791757b6cf!8m2!3d-31.5423433!4d-68.5578874!9m1!1b1!16s%2Fg%2F11s59y94l0?entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
+      target="_blank" 
+      class="inline-flex items-center gap-2 bg-orange-500 text-white font-bold px-6 py-3 rounded-full shadow hover:scale-105 transition-transform">
+      ⭐ Ver más reseñas reales en Google Maps
+      <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Google Maps" class="h-6 w-6" />
+    </a>
+  </div>
+
+<section class="testimonials grid md:grid-cols-3 gap-6 my-12 px-4">
+  <div class="testimonial bg-white p-6 rounded-xl shadow text-center">
+    <p class="italic">“¡Increíble experiencia! Mis hijos se divirtieron como nunca. Súper recomendables.”</p>
+    <span class="block mt-4 font-bold text-orange-500">– Mariana G.</span>
+  </div>
+  <div class="testimonial bg-white p-6 rounded-xl shadow text-center">
+    <p class="italic">“Una fiesta llena de magia, juegos y alegría. Gracias AnimArte por tanto amor.”</p>
+    <span class="block mt-4 font-bold text-orange-500">– Lucas P.</span>
+  </div>
+  <div class="testimonial bg-white p-6 rounded-xl shadow text-center">
+    <p class="italic">“Todo fue perfecto, desde el primer contacto hasta el cierre del evento.”</p>
+    <span class="block mt-4 font-bold text-orange-500">– Carla S.</span>
+  </div>
+</section>
+
+<section class="faq-section bg-white p-6 rounded-xl shadow max-w-3xl mx-auto my-12">
+  <h2 class="text-2xl font-bold text-orange-500 mb-6">❓ Preguntas Frecuentes</h2>
+  <details class="faq mb-4 border border-orange-200 rounded-lg overflow-hidden">
+    <summary class="font-bold cursor-pointer p-3 bg-white hover:bg-orange-50 transition flex items-center gap-2">
+      <span class="icon">❓</span> ¿Qué propuesta recomiendan para cada edad?
+    </summary>
+    <p class="mt-2 p-3">Dependiendo de la edad de los niños, recomendamos propuestas específicas que se adaptan a sus intereses y energía. ¡Consultanos para recomendarte la ideal! 🎈</p>
+  </details>
+  <details class="faq mb-4 border border-orange-200 rounded-lg overflow-hidden">
+    <summary class="font-bold cursor-pointer p-3 bg-white hover:bg-orange-50 transition flex items-center gap-2">
+      <span class="icon">❓</span> ¿A qué hora conviene comenzar la animación?
+    </summary>
+    <p class="mt-2 p-3">Sugerimos comenzar una hora y media después del inicio del evento para asegurar que estén todos los invitados presentes y listos para disfrutar.</p>
+  </details>
+  <details class="faq mb-4 border border-yellow-300 bg-yellow-50 rounded-lg overflow-hidden">
+    <summary class="font-bold cursor-pointer p-3 hover:bg-yellow-100 transition flex items-center gap-2">
+      <span class="icon">❓</span> ¿Qué incluye cada propuesta y cada adicional?
+    </summary>
+    <p class="mt-2 p-3">Las propuestas incluyen animación, sonido, banderines, dos profes, dos horas de diversión y mucho más. Los adicionales varían según lo que elijas (maquillaje, globología, slime, etc).</p>
+  </details>
+  <details class="faq mb-4 border border-yellow-300 bg-yellow-50 rounded-lg overflow-hidden">
+    <summary class="font-bold cursor-pointer p-3 hover:bg-yellow-100 transition flex items-center gap-2">
+      <span class="icon">❓</span> ¿Cuánto cuesta cada adicional?
+    </summary>
+    <p class="mt-2 p-3">El valor depende del adicional. Consultanos por WhatsApp para pasarte el tarifario actualizado.</p>
+  </details>
+  <details class="faq border border-yellow-300 bg-yellow-50 rounded-lg overflow-hidden">
+    <summary class="font-bold cursor-pointer p-3 hover:bg-yellow-100 transition flex items-center gap-2">
+      <span class="icon">❓</span> ¿Viajan a otras localidades como Caucete o Ullum?
+    </summary>
+    <p class="mt-2 p-3">¡Sí! Vamos a muchas zonas de San Juan. Consultanos para saber si llegamos a tu localidad. Si estás fuera del radio de la Circunvalación, se aplica un costo adicional.</p>
+  </details>
+</section>
+<script>
+  document.querySelectorAll('.faq').forEach(detail => {
+    const icon = detail.querySelector('.icon');
+    detail.addEventListener('toggle', () => {
+      icon.textContent = detail.open ? '✅' : '❓';
+    });
+  });
+</script>
+
+<footer class="bg-white/90 backdrop-blur border-t border-orange-200 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 text-sm text-gray-700">
+    <div>
+      <h3 class="text-orange-600 font-bold mb-2">AnimArte San Juan</h3>
+      <p>Empresa familiar con más de 10 años de experiencia brindando sonrisas, juegos y magia en cada evento. 💛</p>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-2">Contacto</h3>
+      <p>📞 <a href="tel:+5492645123339" class="hover:underline">+54 9 264 512 3339</a></p>
+      <p>📧 <a href="mailto:animartesanjuan@gmail.com" class="hover:underline">animartesanjuan@gmail.com</a></p>
+      <p>📍 San Juan, Argentina</p>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-2">Redes Sociales</h3>
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="hover:scale-110 transition-transform" />
+        </a>
+        <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="hover:scale-110 transition-transform" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-orange-500 text-white text-center text-xs py-4">
+    © 2025 AnimArte San Juan. Todos los derechos reservados.
+  </div>
+</footer>
+
 </main>
-<a class="whatsapp-button" href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" target="_blank">
-<img alt="WhatsApp" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
+
+<a href="https://wa.me/5492645123339?text=Hola,%20me%20interesa%20una%20animación%20para%20mi%20evento%20🥳" target="_blank" class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" class="w-7 h-7" />
 </a>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Confetti automático al cargar
+  document.addEventListener("DOMContentLoaded", function () {
+    const colors = ['#FFD700', '#FF69B4', '#87CEEB', '#32CD32', '#FF7F50'];
+    for (let i = 0; i < 100; i++) {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDelay = Math.random() * 5 + "s";
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      document.getElementById("confetti-wrapper").appendChild(confetti);
+    }
+  });
+</script>
+
 </body>
 </html>
