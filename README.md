@@ -20,16 +20,19 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    header {
-      background-color: #ff7f00;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
     header img {
       height: 60px;
       border-radius: 12px;
@@ -45,11 +48,13 @@
       display: flex;
       gap: 1rem;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    
+nav a {
+  color: #ff7f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -215,6 +220,11 @@
   transform: translateY(-4px) scale(1.07);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+.hero, .testimonials, .faq-section, .footer-banner {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -262,8 +272,6 @@ document.addEventListener("DOMContentLoaded", function () {
 <a href="propuestas.html">Propuestas</a>
 <a href="adicionales.html">Adicionales</a>
 <a href="quienes-somos.html">Quiénes somos</a>
-
-
 <a href="contacto.html">Contacto</a>
 </nav>
 </header>
