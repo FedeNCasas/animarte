@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="es">
@@ -264,16 +263,29 @@ document.addEventListener("DOMContentLoaded", function () {
 </head>
 <body style="background: url('paracaidas.jpg') no-repeat center center fixed;background-size: cover;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;overflow-x: hidden;color: #333;">
 <header>
-<a href="index.html">
-<img alt="Logo AnimArte" src="logo.png"/>
-</a>
-<nav>
-<a href="index.html">Inicio</a>
-<a href="propuestas.html">Propuestas</a>
-<a href="adicionales.html">Adicionales</a>
-<a href="quienes-somos.html">Quiénes somos</a>
-<a href="contacto.html">Contacto</a>
+<div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+<!-- Logo a la izquierda -->
+<div class="flex-shrink-0">
+<img alt="Logo AnimArte" class="h-12 w-auto" src="logo.png"/>
+</div>
+<!-- Menú centrado -->
+<nav class="hidden md:flex gap-6 text-orange-600 font-semibold text-sm md:text-base mx-auto">
+<a class="hover:text-pink-500" href="index.html">Inicio</a>
+<a class="hover:text-pink-500" href="propuestas.html">Propuestas</a>
+<a class="hover:text-pink-500" href="adicionales.html">Adicionales</a>
+<a class="hover:text-pink-500" href="quienes-somos.html">Quiénes somos</a>
+<a class="hover:text-pink-500" href="contacto.html">Contacto</a>
 </nav>
+<!-- Redes sociales a la derecha -->
+<div class="flex gap-3">
+<a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank">
+<img alt="Instagram" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/E4405F/instagram-new.png"/>
+</a>
+<a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+<img alt="Facebook" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/1877F2/facebook-new.png"/>
+</a>
+</div>
+</div>
 </header>
 <main>
 <section class="hero">
