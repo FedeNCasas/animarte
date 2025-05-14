@@ -1,110 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Adicionales - AnimArte</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    body {
-      background: linear-gradient(to bottom right, #fff7ed, #fef3c7);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-    }
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adicionales - AnimArte San Juan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .backdrop-blur { backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.75); }
   </style>
 </head>
-<body class="pb-20">
-<header class="bg-white shadow sticky top-0 z-50">
-<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-<div class="flex items-center gap-4">
-<img alt="Logo AnimArte" class="h-12 w-auto" src="logo.png"/>
-<nav class="hidden md:flex gap-4 text-orange-600 font-semibold text-sm md:text-base">
-<a class="hover:text-pink-500" href="/">Inicio</a>
-<a class="hover:text-pink-500" href="/propuestas">Propuestas</a>
-<a class="hover:text-pink-500" href="/adicionales">Adicionales</a>
-<a class="hover:text-pink-500" href="/quienes-somos">Quiénes somos</a>
-<a class="hover:text-pink-500" href="/contacto">Contacto</a>
-</nav>
-</div>
-<div class="flex gap-3">
-<a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank">
-<img alt="Instagram" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/E4405F/instagram-new.png"/>
-</a>
-<a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
-<img alt="Facebook" class="h-6 w-6" src="https://img.icons8.com/ios-filled/25/1877F2/facebook-new.png"/>
-</a>
-</div>
-</div>
+<body class="font-sans bg-[url('paracaidas.jpg')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden">
+
+<!-- Header pegado del INICIO -->
+<header class="bg-white/90 shadow sticky top-0 z-50 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+    <div class="flex-shrink-0">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo AnimArte" class="h-12 transition-transform duration-300 hover:scale-110 rounded-xl shadow" />
+      </a>
+    </div>
+    <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none z-50">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex gap-6 font-semibold text-sm md:text-base absolute md:static top-full left-0 w-full md:w-auto backdrop-blur py-6 md:py-0 px-6 md:px-0 flex-col md:flex-row items-center md:items-center text-orange-600 shadow md:shadow-none animate-slide-down">
+      <a href="index.html" class="hover:text-pink-500">Inicio</a>
+      <a href="propuestas.html" class="hover:text-pink-500">Propuestas</a>
+      <a href="adicionales.html" class="hover:text-pink-500">Adicionales</a>
+      <a href="quienes-somos.html" class="hover:text-pink-500">Quiénes somos</a>
+      <a href="contacto.html" class="hover:text-pink-500">Contacto</a>
+    </nav>
+    <div class="hidden md:flex gap-3 absolute right-4 md:static">
+      <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+    </div>
+  </div>
 </header>
-<main class="max-w-6xl mx-auto px-6 pt-12">
-<h2 class="text-4xl font-extrabold text-orange-600 text-center mb-6">Adicionales que podés sumar 🎁</h2>
-<p class="text-center text-gray-700 mb-12">Elegí los extras que quieras sumar a tu propuesta y consultanos directamente por WhatsApp.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🎨 Maquillaje artístico</h3>
-<p class="text-gray-600 text-sm mb-4">Colores, glitter y diseños para brillar todo el evento.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Maquillaje%20artístico'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🤪 Slime</h3>
-<p class="text-gray-600 text-sm mb-4">Una estación divertida y sensorial para crear slime.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Slime'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🏰 Inflables grandes</h3>
-<p class="text-gray-600 text-sm mb-4">Castillos inflables para saltar sin parar.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Inflables%20grandes'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">💦 Deslizadores con agua</h3>
-<p class="text-gray-600 text-sm mb-4">Diversión asegurada para los días de calor.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Deslizadores%20con%20agua'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🎉 Fiesta de la espuma</h3>
-<p class="text-gray-600 text-sm mb-4">¡Nubes de espuma para jugar y bailar!</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Fiesta%20de%20la%20espuma'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🎈 Globología</h3>
-<p class="text-gray-600 text-sm mb-4">Figuras con globos que fascinan a grandes y chicos.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Globología'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🫧 Burbujas gigantes</h3>
-<p class="text-gray-600 text-sm mb-4">Burbujas enormes que llenan de magia el ambiente.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Burbujas%20gigantes'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-<div class="card bg-white rounded-xl p-6 shadow border-l-8 border-orange-400">
-<h3 class="text-xl font-bold text-orange-600 mb-2">🍿 Pochoclera y Algodonera</h3>
-<p class="text-gray-600 text-sm mb-4">Snacks dulces que encantan a todos los invitados.</p>
-<a class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition" href="https://wa.me/5492645123339?text=Hola!%20Me%20gustaría%20sumar%20el%20adicional%20'Pochoclera%20y%20Algodonera'%20a%20la%20propuesta%20que%20elegí%20🎉" target="_blank">
-        Quiero sumar esto
-      </a>
-</div>
-</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold text-orange-600 text-center mb-10">✨ Adicionales para potenciar tu evento</h1>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Maquillaje artístico en acción" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Maquillaje artístico</h2>
+      <p class="text-sm mb-4">Caritas pintadas, glitter, unicornios y superhéroes. ¡Imaginación a flor de piel!</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Maquillaje%20art%C3%ADstico%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_4" title="Taller de slime" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Taller de slime</h2>
+      <p class="text-sm mb-4">¡Amasar, mezclar, crear! Una experiencia sensorial que los chicos aman.</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Taller%20de%20slime%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_5" title="Inflables gigantes" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Inflables gigantes</h2>
+      <p class="text-sm mb-4">¡Diversión asegurada con nuestros inflables! Colores, saltos y sonrisas.</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Inflables%20gigantes%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Globología" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Globología</h2>
+      <p class="text-sm mb-4">Figuras divertidas, espadas, flores y más con globos de colores. ¡Un clásico que nunca falla!</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Globolog%C3%ADa%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Fiesta de la espuma" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Fiesta de la espuma</h2>
+      <p class="text-sm mb-4">¡Diversión y frescura garantizada! Ideal para los días calurosos.</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Fiesta%20de%20la%20espuma%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      <div class="mb-4 aspect-[9/16]">
+        <iframe class="w-full h-full rounded-xl shadow" src="https://www.youtube.com/embed/VIDEO_ID_6" title="Burbujas gigantes" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2 class="text-xl font-semibold text-orange-600 mb-2">Burbujas gigantes</h2>
+      <p class="text-sm mb-4">Un show mágico de burbujas que sorprende a grandes y chic@s. ¡Pura fantasía!</p>
+      <a href="https://wa.me/5492645123339?text=Hola!%20Quiero%20consultar%20por%20Burbujas%20gigantes%20como%20adicional%20para%20mi%20evento" target="_blank" class="inline-block mt-2 px-5 py-2 bg-green-500 text-white font-bold rounded-full shadow hover:scale-105 transition-transform">Consultar por WhatsApp</a>
+    </div>
+  </div>
+
 </main>
+
 </body>
 </html>
