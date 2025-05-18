@@ -45,7 +45,7 @@
     }
   </style>
 </head>
-<body class="font-sans bg-[url('paracaidas.jpg')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden">
+<body class="font-sans bg-[url('paracaidas.jpg.JPG')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden">
 
 <header class="bg-white/90 shadow sticky top-0 z-50 backdrop-blur">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
