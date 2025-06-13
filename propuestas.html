@@ -1,133 +1,105 @@
-<!-- Sección de Propuestas - AnimArte San Juan -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuestas - AnimArte San Juan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .backdrop-blur { backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.75); }
+  </style>
+</head>
+<body class="font-sans bg-[url('paracaidas.jpg.JPG')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden">
+
+<!-- Header pegado del INICIO -->
+<header class="bg-white/90 shadow sticky top-0 z-50 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+    <div class="flex-shrink-0">
       <a href="index.html">
-        <img src="logo.png" alt="Logo AnimArte" class="h-12">
+        <img src="logo.png" alt="Logo AnimArte" class="h-12 transition-transform duration-300 hover:scale-110 rounded-xl shadow" />
       </a>
     </div>
-    <nav class="flex flex-wrap justify-center gap-6 text-orange-700 font-semibold text-base">
-      <a href="index.html" class="hover:text-orange-500 transition duration-300">Inicio</a>
-      <a href="propuestas.html" class="text-orange-600 underline underline-offset-4">Propuestas</a>
-      <a href="adicionales.html" class="hover:text-orange-500 transition duration-300">Adicionales</a>
-      <a href="quienes-somos.html" class="hover:text-orange-500 transition duration-300">Quiénes Somos</a>
-      <a href="contacto.html" class="hover:text-orange-500 transition duration-300">Contacto</a>
+    <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none z-50">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex gap-6 font-semibold text-sm md:text-base absolute md:static top-full left-0 w-full md:w-auto backdrop-blur py-6 md:py-0 px-6 md:px-0 flex-col md:flex-row items-center md:items-center text-orange-600 shadow md:shadow-none animate-slide-down">
+      <a href="index.html" class="hover:text-pink-500">Inicio</a>
+      <a href="propuestas.html" class="hover:text-pink-500">Propuestas</a>
+      <a href="adicionales.html" class="hover:text-pink-500">Adicionales</a>
+      <a href="quienes-somos.html" class="hover:text-pink-500">Quiénes somos</a>
+      <a href="contacto.html" class="hover:text-pink-500">Contacto</a>
     </nav>
+    <div class="hidden md:flex gap-3 absolute right-4 md:static">
+      <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="h-5 w-5 hover:scale-110 transition-transform" />
+      </a>
+    </div>
   </div>
 </header>
 
-<section class="py-12 px-4 md:px-12 bg-orange-50 relative">
-  <div class="absolute inset-0 bg-[url('globos_confetis.png')] bg-cover bg-center opacity-10 pointer-events-none"></div>
-  <h2 class="text-4xl font-bold text-center text-orange-700 mb-8 drop-shadow">¡Elegí tu propuesta favorita! 🧡</h2>
-
-  <div class="space-y-16 relative z-10">
-
-    <!-- Categoría: Infantiles y Familiares -->
-    <h3 class="text-3xl font-bold text-orange-600 text-center mb-6">🎈 Propuestas Infantiles y Familiares</h3>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-    <!-- Kermés -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-orange-200">
-      <h3 class="text-2xl font-semibold text-orange-600 mb-2">Kermés 🎪</h3>
-      <p class="mb-4">Estaciones adaptadas por edad, paracaídas gigante, integración y kiosco familiar 🎯🍭</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-orange-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=kermes" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+<main class="max-w-6xl mx-auto px-4 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold text-orange-600 text-center mb-10">🎈 Nuestras Propuestas</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+      <p class="text-sm mb-4">Una opción básica con lo esencial. Ideal si querés algo simple y funcional.</p>
+      <a href="adicionales.html?propuesta=Propuesta económica" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Taller de Murga -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-purple-200">
-      <h3 class="text-2xl font-semibold text-purple-600 mb-2">Taller de Murga 🥁</h3>
-      <p class="mb-4">Percusión, maquillaje murguero, banderas y mucha energía colorida 🎭🎉</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-purple-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=murga" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Estaciones con juegos clásicos, premios y diversión garantizada.</p>
+      <a href="adicionales.html?propuesta=Kermés" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Propuesta Deportiva -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-blue-200">
-      <h3 class="text-2xl font-semibold text-blue-600 mb-2">Propuesta Deportiva ⚽</h3>
-      <p class="mb-4">Juegos deportivos y predeportivos: fútbol, básquet y más 💪🏃‍♀️</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-blue-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=deportiva" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Dinámicas grupales para fortalecer vínculos y el trabajo en equipo.</p>
+      <a href="adicionales.html?propuesta=Juegos cooperativos" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Propuesta Acuática -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-cyan-200">
-      <h3 class="text-2xl font-semibold text-cyan-600 mb-2">Propuesta Acuática 💦</h3>
-      <p class="mb-4">Juegos en la pileta, pista jabonosa, colores y sol 🌞🫧</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-cyan-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=acuatica" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Juegos con agua, deslizadores y mucha energía para todos los gustos.</p>
+      <a href="adicionales.html?propuesta=Propuesta acuática" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Juegos Cooperativos -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-lime-200">
-      <h3 class="text-2xl font-semibold text-lime-600 mb-2">Juegos Cooperativos 🤝</h3>
-      <p class="mb-4">Actividades colaborativas y lúdicas adaptadas a cada grupo 👧🧒</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-lime-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=cooperativos" class="bg-lime-500 hover:bg-lime-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Talleres creativos para pintar, crear y expresarse con alegría.</p>
+      <a href="adicionales.html?propuesta=Propuesta artística" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Propuesta Artística -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-pink-200">
-      <h3 class="text-2xl font-semibold text-pink-600 mb-2">Propuesta Artística 🎨</h3>
-      <p class="mb-4">Slime, masas, rompecabezas, dibujos y mucha creatividad 🧼🖌️</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-pink-100 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=artistica" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Circuitos, juegos y desafíos para mover el cuerpo y divertirse.</p>
+      <a href="adicionales.html?propuesta=Propuesta deportiva" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-    <!-- Propuesta Económica -->
-    <div class="bg-yellow-100 border-4 border-yellow-400 rounded-2xl shadow-xl p-6 transform scale-105">
-      <h3 class="text-2xl font-bold text-yellow-700 mb-2">Propuesta Económica 🪙</h3>
-      <p class="mb-4">Una opción accesible con juegos básicos y animación para compartir 💛</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4"><div class="w-full h-full bg-yellow-200 rounded-lg flex items-center justify-center">Video aquí</div></div>
-      <a href="adicionales.html?propuesta=economica" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
+    
+      <p class="text-sm mb-4">Jornadas llenas de juegos, valores y participación de toda la comunidad educativa.</p>
+      <a href="adicionales.html?propuesta=Propuesta para escuelas" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
+    
+      <p class="text-sm mb-4">Espacios lúdicos para celebrar con equipos de trabajo, colegas o clientes.</p>
+      <a href="adicionales.html?propuesta=Propuesta para empresas" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
+    
+      <p class="text-sm mb-4">Celebración divertida y emotiva para esperar al bebé con juegos, música y recuerdos.</p>
+      <a href="adicionales.html?propuesta=Baby Shower" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
     </div>
 
-  <!-- Sección de eventos personalizados -->
-  <div class="mt-20 text-center max-w-3xl mx-auto text-orange-700">
-    <h3 class="text-3xl font-bold mb-4">🎯 ¿Tu evento es escolar, baby shower, casamiento o empresarial?</h3>
-    <p class="mb-6 text-lg">Ofrecemos propuestas personalizadas para eventos especiales, ya sean para niños, adultos o ambos. Contanos cómo es tu celebración y armamos algo único para vos.</p>
-    <a href="https://wa.me/5492640000000?text=Hola!%20Quisiera%20una%20propuesta%20personalizada%20para%20mi%20evento" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full transition duration-300">Consultar por WhatsApp</a>
+    
+      <p class="text-sm mb-4">Animación pensada para acompañar este gran día con propuestas para todas las edades.</p>
+      <a href="adicionales.html?propuesta=Casamiento" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
+    </div>
+
+    
+      <p class="text-sm mb-4">Animación única para cumpleaños, celebraciones personales o momentos inolvidables.</p>
+      <a href="adicionales.html?propuesta=Fiesta especial" class="inline-block mt-4 px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition-transform">Elegir esta propuesta</a>
+    </div>
   </div>
-      <a href="adicionales.html?propuesta=babyshower" class="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
-    </div>
-
-    <!-- Casamiento -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-fuchsia-200">
-      <h3 class="text-2xl font-semibold text-fuchsia-600 mb-2">Casamiento 💍</h3>
-      <p class="mb-4">Te acompañamos en tu boda con opciones de animación para niñ@s, para adultos o para todos. ¡Vos elegís cómo disfrutar ese gran día!</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4">
-        <div class="w-full h-full bg-fuchsia-100 rounded-lg flex items-center justify-center">Video aquí</div>
-      </div>
-      <a href="adicionales.html?propuesta=casamiento" class="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
-    </div>
-
-    <!-- Evento Empresarial -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-slate-300">
-      <h3 class="text-2xl font-semibold text-slate-700 mb-2">Evento Empresarial 👔</h3>
-      <p class="mb-4">Creamos experiencias para jornadas corporativas con propuestas para niños, adultos o actividades compartidas para toda la familia.</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4">
-        <div class="w-full h-full bg-slate-200 rounded-lg flex items-center justify-center">Video aquí</div>
-      </div>
-      <a href="adicionales.html?propuesta=empresarial" class="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
-    </div>
-
-    <!-- Evento Escolar -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 border border-amber-200">
-      <h3 class="text-2xl font-semibold text-amber-600 mb-2">Evento Escolar 📚</h3>
-      <p class="mb-4">Celebraciones escolares, recreos activos, efemérides y jornadas especiales llenas de juego.</p>
-      <div class="aspect-w-16 aspect-h-9 mb-4">
-        <div class="w-full h-full bg-amber-100 rounded-lg flex items-center justify-center">Video aquí</div>
-      </div>
-      <a href="adicionales.html?propuesta=escolar" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
-    </div>
-
-    </div>
-      <a href="adicionales.html?propuesta=escolar" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full transition duration-300">¡Quiero esta propuesta!</a>
-    </div>
-
-  </div>
-</section>
+</main>
+</body>
+</html>
