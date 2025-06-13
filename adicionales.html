@@ -159,15 +159,17 @@
       return;
     }
 
-    const mensaje = Hola! Quiero reservar una propuesta y consultar por estos adicionales para mi evento:
+    const mensaje = `Hola! Quiero reservar una propuesta y consultar por estos adicionales para mi evento:
 
 Pack Básico: Dos profes, dos horas de juegos divertidos, deportivos y tradicionales, sin decoración extra ni sonido. ¡Diversión asegurada! 🥳 Te sale $70.000
 
 Propuesta Premium: $120.000 😃
 2 horas de Animación, sonido 🎤🎤, dos profes, decoración con banderines 🌈, paracaídas, juegos según propuestas enviadas. Reserva con seña previa. 💕
 
-Adicionales seleccionados: ${seleccionados.map(s => s.split(' - ')[0]).join(', ')};
-    const url = https://wa.me/5492645123339?text=${encodeURIComponent(mensaje)};
+Adicionales seleccionados:
+${seleccionados.map(s => '• ' + s).join('\n')}`;
+
+    const url = `https://wa.link/he8gxe?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   }
 </script>
