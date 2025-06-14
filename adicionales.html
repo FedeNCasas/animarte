@@ -150,6 +150,9 @@
   </button>
 </div>
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const propuestaSeleccionada = urlParams.get("propuesta") || "(sin especificar)";
+
   function enviarWhatsApp() {
     const seleccionados = Array.from(document.querySelectorAll('input[name="adicional"]:checked'))
       .map(cb => cb.value);
@@ -161,10 +164,7 @@
 
     const mensaje = `Hola! 👋 Me interesa reservar una propuesta y consultar por estos adicionales para mi evento:
 
-✨ Pack Básico: Dos profes, dos horas de juegos divertidos, deportivos y tradicionales. Sin decoración extra ni sonido. Valor: $70.000
-
-🌟 Propuesta Premium: $120.000
-Incluye 2 horas de Animación, sonido 🎤, dos profes, decoración con banderines 🌈, paracaídas y juegos. Requiere seña previa 💕.
+🎈 Propuesta elegida: ${propuestaSeleccionada}
 
 🧩 Adicionales seleccionados:
 ${seleccionados.map(s => '• ' + s).join('\n')}`;
@@ -173,7 +173,6 @@ ${seleccionados.map(s => '• ' + s).join('\n')}`;
     window.open(url, '_blank');
   }
 </script>
-
 
   </div>
 <footer class="bg-white/90 backdrop-blur border-t border-orange-200 mt-16">
