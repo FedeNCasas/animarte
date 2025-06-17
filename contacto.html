@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - AnimArte San Juan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .backdrop-blur { backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.75); }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: float 10s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-50px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body class="font-sans bg-[url('paracaidas.jpg.JPG')] bg-cover bg-center bg-fixed text-gray-800 overflow-x-hidden relative">
+
+<!-- Header -->
+<header class="bg-white/90 shadow sticky top-0 z-50 backdrop-blur border-b border-orange-200">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center sm:flex-row sm:justify-between">
+    <a href="index.html" class="mb-4 sm:mb-0">
+      <img src="logo.png" alt="Logo AnimArte" class="h-14 drop-shadow-md">
+    </a>
+    <nav class="w-full">
+      <ul class="flex justify-center gap-6 flex-wrap">
+        <li><a href="index.html" class="hover:text-orange-600 font-medium">Inicio</a></li>
+        <li><a href="propuestas.html" class="hover:text-orange-600 font-medium">Propuestas</a></li>
+        <li><a href="adicionales.html" class="hover:text-orange-600 font-medium">Adicionales</a></li>
+        <li><a href="quienes.html" class="hover:text-orange-600 font-medium">¿Quiénes Somos?</a></li>
+        <li><a href="contacto.html" class="text-orange-600 font-bold border-b-2 border-orange-500 pb-1">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Burbujas decorativas -->
+<div class="bubble bg-pink-300 w-12 h-12 top-20 left-10"></div>
+<div class="bubble bg-green-200 w-16 h-16 top-40 right-10"></div>
+<div class="bubble bg-orange-200 w-8 h-8 bottom-20 left-1/3"></div>
+
+<!-- Contenido principal -->
+<main class="max-w-4xl mx-auto my-12 p-6 bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg">
+  <h1 class="text-3xl sm:text-4xl font-bold text-orange-500 text-center mb-6">¡Conectá con AnimArte!</h1>
+  <p class="text-center text-lg text-gray-700 mb-8">Estamos felices de acompañarte en tu próximo evento con alegría, compromiso y corazón. 💖</p>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    <!-- Formulario -->
+    <form action="https://formsubmit.co/animarte.sanjuan@gmail.com" method="POST" class="space-y-4">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700">Nombre</label>
+        <input type="text" name="nombre" placeholder="Tu nombre" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700">Email</label>
+        <input type="email" name="email" placeholder="tu@email.com" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700">Mensaje</label>
+        <textarea name="mensaje" rows="4" placeholder="Contanos tu idea..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" required></textarea>
+      </div>
+      <button type="submit" class="w-full bg-orange-400 text-white py-2 px-4 rounded-lg shadow hover:bg-orange-500 transition-all">Enviar mensaje</button>
+    </form>
+
+    <!-- Información de contacto -->
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3 12a1 1 0 001 .75h10a1 1 0 001-.75l3-12H5" /></svg>
+        <p class="text-gray-700">San Juan, Argentina</p>
+      </div>
+      <div class="flex items-center space-x-3">
+        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0v1a4 4 0 11-8 0v-1" /></svg>
+        <p class="text-gray-700">animarte.sanjuan@gmail.com</p>
+      </div>
+      <div class="flex items-center space-x-3">
+        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a16 16 0 0118 0m0 0v14a16 16 0 01-18 0V5z" /></svg>
+        <p class="text-gray-700">+54 264 512-3339</p>
+      </div>
+      <a href="https://wa.me/542645123339?text=Hola%20AnimArte!%20Quisiera%20consultar%20sobre%20una%20propuesta%20para%20mi%20evento." target="_blank" class="inline-block mt-4 bg-green-400 text-white font-semibold px-5 py-3 rounded-xl shadow hover:bg-green-500 transition-all text-center w-full">Escribinos por WhatsApp</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-orange-200 mt-16 relative z-10">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10 text-sm text-gray-700">
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">AnimArte San Juan</h3>
+      <p>Empresa familiar con más de 10 años de experiencia brindando sonrisas, juegos y magia en cada evento. 💛</p>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">Contacto</h3>
+      <ul class="space-y-2">
+        <li>📞 <a href="tel:+5492645123339" class="hover:underline">+54 9 264 512 3339</a></li>
+        <li>📧 <a href="mailto:animarte.sanjuan@gmail.com" class="hover:underline">animarte.sanjuan@gmail.com</a></li>
+        <li>📍 San Juan, Argentina</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">Redes Sociales</h3>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="hover:scale-110 transition-transform" />
+        </a>
+        <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="hover:scale-110 transition-transform" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-orange-500 text-white text-center text-xs py-4">
+    © 2025 AnimArte San Juan. Todos los derechos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
