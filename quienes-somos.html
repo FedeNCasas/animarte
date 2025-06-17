@@ -77,4 +77,100 @@
   </div>
 </header>
 
-<!-- (el resto del contenido permanece igual) -->
+<!-- BURBUJAS -->
+<div class="pointer-events-none fixed inset-0 z-10 overflow-hidden">
+  <div class="absolute w-6 h-6 bg-white/30 rounded-full animate-[float_18s_linear_infinite] left-[10%] bottom-[-50px]"></div>
+  <div class="absolute w-8 h-8 bg-white/20 rounded-full animate-[float_24s_linear_infinite] left-[25%] bottom-[-80px]"></div>
+  <div class="absolute w-5 h-5 bg-white/25 rounded-full animate-[float_20s_linear_infinite] left-[40%] bottom-[-60px]"></div>
+  <div class="absolute w-7 h-7 bg-white/15 rounded-full animate-[float_22s_linear_infinite] left-[60%] bottom-[-70px]"></div>
+  <div class="absolute w-6 h-6 bg-white/10 rounded-full animate-[float_26s_linear_infinite] left-[75%] bottom-[-90px]"></div>
+  <div class="absolute w-5 h-5 bg-white/20 rounded-full animate-[float_28s_linear_infinite] left-[85%] bottom-[-100px]"></div>
+</div>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-120vh) scale(0.5);
+    }
+  }
+</style>
+
+<!-- FRASE DESTACADA -->
+<div class="text-center mt-10 mb-4 relative z-10">
+  <h2 class="text-2xl md:text-3xl font-bold text-pink-500 drop-shadow-sm animate-bounce">✨ Donde hay juego, hay magia... ¡y corazón! ✨</h2>
+</div>
+
+<!-- TARJETA DE HISTORIA -->
+<section class="max-w-5xl mx-auto px-6 py-12 relative z-10">
+  <div class="bg-white/80 rounded-3xl shadow-xl p-8 sm:p-12 border-4 border-orange-200 backdrop-blur relative overflow-hidden">
+    <img src="https://cdn-icons-png.flaticon.com/512/4249/4249871.png" alt="Decoración" class="w-16 opacity-20 absolute top-4 left-4 rotate-[-15deg] float-anim">
+    <img src="https://cdn-icons-png.flaticon.com/512/4249/4249839.png" alt="Decoración" class="w-16 opacity-20 absolute bottom-4 right-4 rotate-[10deg] float-anim">
+    <img src="https://cdn-icons-png.flaticon.com/512/4221/4221350.png" alt="Decoración corazón" class="w-10 opacity-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pulse-soft">
+    <img src="https://cdn-icons-png.flaticon.com/512/3917/3917057.png" alt="Estrella decorativa" class="w-8 opacity-10 absolute top-10 right-1/3 float-anim">
+    <img src="https://cdn-icons-png.flaticon.com/512/3917/3917014.png" alt="Sol decorativo" class="w-12 opacity-10 absolute bottom-12 left-1/4 float-anim">
+
+    <div class="text-center space-y-6 text-lg text-gray-700 leading-relaxed relative z-10">
+      <div class="fade-up appear">
+        <h1 class="text-4xl font-bold text-orange-500 mb-6">💛 Nuestra historia</h1>
+      </div>
+      <div class="fade-up appear delay-75">
+        <p><strong>AnimArte nació del deseo profundo de crecer como familia.</strong><br>
+        En un momento de cambios y desafíos, decidimos apostar por lo que sí teníamos: energía, creatividad y muchas ganas de salir adelante.</p>
+      </div>
+      <div class="fade-up appear delay-150">
+        <p>Al principio, todo era a pulmón. Empezamos con unos conos, aros y una soga. Pintamos el material a mano, cosimos bolsos, armamos nuestros propios juegos. Cada moneda que ganábamos, la reinvertíamos en el sueño.</p>
+      </div>
+      <div class="fade-up appear delay-200">
+        <p><strong>Así, paso a paso, evento tras evento, nació AnimArte.</strong></p>
+      </div>
+      <div class="fade-up appear delay-300">
+        <p>Detrás de cada propuesta hay mucho más que animación:<br>
+        hay una profe de Educación Física apasionada por el juego,<br>
+        una familia entera que se sumó con ideas, tiempo y amor,<br>
+        y una comunidad que confió en nosotras desde el primer día.</p>
+      </div>
+      <div class="fade-up appear delay-400">
+        <p>Hoy, con más de 10 años de historia, seguimos creciendo con la misma energía del comienzo.<br>
+        <strong>Creemos en el poder del encuentro, en los vínculos felices y en la magia del juego.</strong></p>
+      </div>
+      <div class="fade-up appear delay-500">
+        <p class="text-xl text-orange-600 font-semibold">💛 Porque cuando uno hace lo que ama, el corazón se nota.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-orange-200 mt-16 relative z-10">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10 text-sm text-gray-700">
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">AnimArte San Juan</h3>
+      <p>Empresa familiar con más de 10 años de experiencia brindando sonrisas, juegos y magia en cada evento. 💛</p>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">Contacto</h3>
+      <ul class="space-y-2">
+        <li>📞 <a href="tel:+5492645123339" class="hover:underline">+54 9 264 512 3339</a></li>
+        <li>📧 <a href="mailto:animarte.sanjuan@gmail.com" class="hover:underline">animarte.sanjuan@gmail.com</a></li>
+        <li>📍 San Juan, Argentina</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-orange-600 font-bold mb-4">Redes Sociales</h3>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="hover:scale-110 transition-transform" />
+        </a>
+        <a href="https://www.facebook.com/animarte.sanjuan" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/1877F2/facebook-new.png" alt="Facebook" class="hover:scale-110 transition-transform" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-orange-500 text-white text-center text-xs py-4">
+    © 2025 AnimArte San Juan. Todos los derechos reservados.
+  </div>
+</footer>
